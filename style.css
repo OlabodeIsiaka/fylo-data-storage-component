@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	/* colors */
+	--Pale-Blue: hsl(243, 100%, 93%);
+	--Grayish-Blue: hsl(229, 7%, 55%);
+	--Dark-Blue: hsl(228, 56%, 26%);
+	--Very-Dark-Blue: hsl(229, 57%, 11%);
+	--Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+}
+body {
+	background-color: var(--Very-Dark-Blue);
+		background-image: url(./images/bg-mobile.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+	font-family: "Raleway", sans-serif;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+height: 100vh;
+	
+}
+
+.wrapper {
+	max-width: 400px;
+	
+
+}
+.logo{
+	width: 60%;
+}
+.section-1 {
+	background-color: var(--Dark-Blue);
+	margin-bottom: 1.5rem;
+	padding: 4em 6em 4em 4em;
+	border-radius: 0.8rem 7rem 0.8rem 0.8rem;
+	display: grid;
+	justify-items: flex-start;
+	gap: 2rem;
+}
+.section-2 {
+	background-color: var(--Dark-Blue);
+	padding: 2.5em;
+	border-radius: 0.8rem 0.8rem 0.8rem 0.8rem;
+	position: relative;
+}
+
+.call-to-actions {
+	display: flex;
+	gap: 2rem;
+}
+.cta-1::before {
+	display: block;
+	content: url(./images/icon-document.svg);
+	background-color: var(--Very-Dark-Blue);
+	padding: 1em 1.2em;
+	border-radius: 0.7rem;
+}
+.cta-2::before {
+	display: block;
+	content: url(./images/icon-folder.svg);
+	background-color: var(--Very-Dark-Blue);
+	padding: 1.2em 1.2em;
+	border-radius: 0.7rem;
+}
+.cta-3::before {
+	display: block;
+	content: url(./images/icon-upload.svg);
+	background-color: var(--Very-Dark-Blue);
+	padding: 1.4em 1.2em;
+	border-radius: 0.7rem;
+}
+
+span {
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: var(--Pale-Blue);
+}
+.big-bar {
+	position: relative;
+	width: 90%;
+	margin: 1em auto;
+	box-sizing: border-box;
+	background-color: hsl(228, 46%, 19%);
+	height: 4rem;
+	padding: 0.3em;
+	border-radius: 0.8rem;
+	overflow: hidden;
+	height: 20px;
+	z-index: 1;
+}
+.progress-bar {
+	position: relative;
+	width: 70%;
+	height: 0.8rem;
+	border-radius: 0.8rem;
+	background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+	box-shadow: 0 1px 2px hsl(228, 46%, 19%);
+	z-index: 2;
+	display: flex;
+	justify-content: flex-end;
+	padding: 0.1em;
+}
+.progress-bar .click {
+	position: absolute;
+	background: var(--Pale-Blue);
+	height: 70%;
+	width: 4%;
+	border-radius: 50%;
+	z-index: 9999;
+	margin: 0.02em;
+}
+p {
+	color: var(--Pale-Blue);
+	font-weight: 400;
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+.range-flex {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 2em;
+}
+.range {
+	font-weight: 700;
+	color: var(--Pale-Blue);
+	margin:0 -0.7em 3em  ;
+}
+
+.float-bubble {
+	width: 40%;
+	position: absolute;
+	background: white;
+	padding: 1em;
+	border-radius: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.8rem;
+	z-index: 99999;
+	left: 7.5rem;
+}
+.float-bubble > h1 {
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--Very-Dark-Blue);
+}
+.float-bubble > span {
+	font-weight: 700;
+	font-size: 0.7rem;
+	color: var(--Grayish-Blue);
+}
+@media (min-width: 1440px) {
+	body {
+		background-color: var(--Very-Dark-Blue);
+		background-image: url(./images/bg-desktop.png);
+		background-repeat: no-repeat;
+		
+	}
+.container{
+	width: 100vw;
+}
+		.wrapper {
+		display: flex;
+		max-width: 1440px;
+		justify-content: center;
+		align-items: flex-end;
+      gap: 1.5rem;
+	}
+	.section-1 {
+	width: min(40%, 25rem);
+    margin-bottom: 0;
+	}
+	.section-2 {
+	width: min(40%,35rem);	
+	}
+    .range{
+        margin-bottom: 1em;
+    }
+   p{
+	text-align: justify;
+	margin-left: 1.8em;
+   }
+  
+.float-bubble{
+	width: 30%;
+	background: white;
+	position: absolute;
+	top: -3rem;
+     left: 22rem;
+	border-radius:0.5rem 0.5rem 0 0.5rem;
+	
+}
+.float-bubble::after{
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 0 solid transparent;
+	border-right: 1.5rem solid #f5f6f7;
+	border-bottom: 1.8rem solid transparent;
+	margin: 6em 0 0 10.3em;
+}
+.attribution{
+	margin-top: -5rem;
+}
+}
+.attribution {
+	color: var(--Pale-Blue);
+	font-size: 14px;
+	text-align: center;
+	margin-top: 2.5em;
+}
+.attribution a {
+	color: hsl(133, 67%, 43%);
+}
